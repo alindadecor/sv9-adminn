@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Palatino", "Palatino Linotype", "Palatino LT STD", "Book Antiqua", "Georgia", serif;
+
+  --color-primary: #004030;
+  --color-secondary: #4A9782;
+  --color-accent: #DCD0A8;
+  --color-cream: #FFF9E5;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-primary font-serif antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.vintage-border {
+  border: 1px solid rgba(0, 64, 48, 0.1);
+}
+
+.vintage-shadow {
+  box-shadow: 0 4px 20px rgba(0, 64, 48, 0.05);
+}
+
+.glass-panel {
+  @apply bg-white/40 backdrop-blur-md border border-white/20;
+}
+
+/* Custom scrollbar for that polished look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
